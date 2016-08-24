@@ -63,8 +63,8 @@ RUN curl -sfL https://github.com/rancher/docker/releases/download/v1.11.2-ros1/d
     mv /assets/docker /assets/docker-1.11.2_arm
 RUN curl -sfL https://github.com/rancher/docker/releases/download/v1.11.2-ros1/docker-1.11.2_arm64.tgz | tar xzf - -C /assets && \
     mv /assets/docker /assets/docker-1.11.2_arm64
-RUN curl -sfL https://get.docker.com/builds/Linux/x86_64/docker-1.12.0.tgz | tar xzf - -C /assets && \
-    mv /assets/docker /assets/docker-1.12.0
+RUN curl -sfL https://get.docker.com/builds/Linux/x86_64/docker-1.12.1.tgz | tar xzf - -C /assets && \
+    mv /assets/docker /assets/docker-1.12.1
 
 ENTRYPOINT ["./scripts/entry"]
 CMD ["ci"]
