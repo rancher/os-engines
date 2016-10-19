@@ -31,7 +31,7 @@ ARG DOCKER_URL_arm64=https://github.com/rancher/docker/releases/download/${DOCKE
 ENV DOCKER_URL DOCKER_URL_${ARCH}
 
 # Export all ARGS as ENV
-ENV ARCH=${ARCH} 
+ENV ARCH=${ARCH}
 ENV DISTRIB_ID=${DISTRIB_ID}
 ENV DOCKER_PATCH_VERSION=${DOCKER_PATCH_VERSION}
 ENV DOCKER_URL=${DOCKER_URL}
@@ -71,6 +71,8 @@ RUN curl -sfL https://github.com/rancher/docker/releases/download/v1.11.2-ros1/d
     mv /assets/docker /assets/docker-1.11.2_arm64
 RUN curl -sfL https://get.docker.com/builds/Linux/x86_64/docker-1.12.1.tgz | tar xzf - -C /assets && \
     mv /assets/docker /assets/docker-1.12.1
+RUN curl -sfL https://get.docker.com/builds/Linux/x86_64/docker-1.12.2.tgz | tar xzf - -C /assets && \
+    mv /assets/docker /assets/docker-1.12.2
 
 ENTRYPOINT ["./scripts/entry"]
 CMD ["ci"]
