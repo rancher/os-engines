@@ -1,12 +1,3 @@
-# os-engines
-Images for RancherOS Docker engines.
+# This repository has been deprecated from 22 Nov 2016
 
-## Building
-
-Run `make`
-
-## Contact
-For bugs, questions, comments, corrections, suggestions, etc., open an issue in
- [rancher/os](//github.com/rancher/os/issues).
-
-Or just [click here](//github.com/rancher/os/issues/new) to create a new issue.
+From RancherOS v0.8.0 and onwards, the Dockerfiles for Docker engines can be found in the [rancher/os-services repository](https://github.com/rancher/os-services).
